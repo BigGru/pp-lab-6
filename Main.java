@@ -16,10 +16,10 @@ public class Main {
         employees.add(new Worker("Anna", 3500.00, 3, "03-03-2020", "Developer"));
         employees.add(new Worker("Bill", 3700.00, 4, "04-04-2020", "Developer"));
         employees.add(new Manager("Karen", 6000.00, 5, "05-05-2020", "Project Manager"));
-        employees.add(new Manager("Jess", 5100.2, 6, "06-06-2020", "HR Manager"));
-        employees.add(new Worker("Jill", 3100.25, 4, "04-04-2020", "Developer"));
-        employees.add(new Worker("Jasper", 3150.5, 3, "07-07-2020", "Developer")); // Duplicate ID with Jake
-        employees.add(new Manager("Julia", 5200.5, 1, "08-08-2020", "IT Manager")); // Duplicate ID with John
+        employees.add(new Worker("Breg", 3000, 1, "01-01-2020", "Developer"));
+        employees.add(new Worker("Greg", 3300, 1, "02-02-2020", "Developer")); 
+        employees.add(new Worker("Caitlyn", 3400, 2, "03-03-2020", "Developer"));
+        employees.add(new Manager("Lucy", 5150, 3, "05-05-2020", "Project Manager"));
 
        
         double totalSalary = employees.stream().mapToDouble(Employee::getSalary).sum();
