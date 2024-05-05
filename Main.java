@@ -2,24 +2,30 @@ import company.models.Manager;
 import company.models.Worker;
 import company.abstracts.Employee;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Employee> employees = new ArrayList<>();
+        
+        Worker worker1 = new Worker("Doug", 3000, 1, "01-01-2020", "Developer");
+        Worker worker2 = new Worker("Jack", 3300, 1, "02-02-2020", "Developer"); // Same ID as worker1
+        Worker worker3 = new Worker("Anna", 3400, 2, "03-03-2020", "Developer");
+        Manager manager = new Manager("Karen", 5150, 3, "05-05-2020", "Project Manager");
 
-        // Create instances of Worker, some with the same ID
-        employees.add(new Worker("John", 3000, 1, "01-01-2020", "Developer"));
-        employees.add(new Worker("John", 3000, 1, "01-01-2020", "Developer")); // Same ID as the first
-        employees.add(new Worker("Jake", 3300.75, 3, "03-03-2020", "Developer"));
-        Manager manager = new Manager("Joe", 5000.1, 5, "05-05-2020", "Project Manager"); // A manager
+        
+        List<Employee> employees = new ArrayList<>();
+        employees.add(worker1);
+        employees.add(worker2);
+        employees.add(worker3);
+        employees.add(manager);
 
-        // Display hashCodes and test equality
+        employees.forEach(emp -> System.out.println(emp.getName() + " Posiada kod: " + emp.hashCode()));
+
+        System.out.println("Porównywanie " + worker2.getName() + " z innymi pracownikami:");
         for (Employee emp : employees) {
-            System.out.println(emp.getName() + " has code: " + emp.hashCode());
+            boolean isEqual = worker2.equals(emp);
+            String message = isEqual ? " Jest równy z " : " Nie jest równy z ";
+            System.out.println(worker2.getName() + message + emp.getName() + " z ID: " + emp.getId());
         }
-
-        // Test equals method
-        System.out.println("First and second workers are the same: " + employees.get(0).equals(employees.get(1)));
-        System.out.println("First worker and manager are the same: " + employees.get(0).equals(manager));
     }
 }
