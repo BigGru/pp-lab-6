@@ -7,10 +7,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         
-        Worker worker1 = new Worker("Doug", 3000, 1, "01-01-2020", "Developer");
-        Worker worker2 = new Worker("Jack", 3300, 1, "02-02-2020", "Developer"); // Same ID as worker1
-        Worker worker3 = new Worker("Anna", 3400, 2, "03-03-2020", "Developer");
-        Manager manager = new Manager("Karen", 5150, 3, "05-05-2020", "Project Manager");
+        Worker worker1 = new Worker("Breg", 3000, 1, "01-01-2020", "Developer");
+        Worker worker2 = new Worker("Greg", 3300, 1, "02-02-2020", "Developer"); // Same ID as worker1
+        Worker worker3 = new Worker("Caitlyn", 3400, 2, "03-03-2020", "Developer");
+        Manager manager = new Manager("Lucy", 5150, 3, "05-05-2020", "Project Manager");
 
         
         List<Employee> employees = new ArrayList<>();
