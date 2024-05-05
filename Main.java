@@ -2,6 +2,7 @@ import company.models.Manager;
 import company.models.Worker;
 import company.abstracts.Employee;
 import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         ArrayList<Employee> employees = new ArrayList<>();
