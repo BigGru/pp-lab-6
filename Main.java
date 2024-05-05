@@ -1,25 +1,25 @@
 import company.models.Manager;
 import company.models.Worker;
+import company.abstracts.Employee;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Worker worker1 = new Worker("Doug", 2500.00, 1);
-        Worker worker2 = new Worker("Jack", 3200.00, 2);
-        Worker worker3 = new Worker("Anna", 3500.00, 3);
-        Worker worker4 = new Worker("Bill", 3700.00, 4);
-        Manager manager = new Manager("Karen", 6000.00, 5);
+        ArrayList<Employee> employees = new ArrayList<>();
 
-        
-        System.out.println(worker1.getName() + " zarabia " + String.format("%.2f", worker1.getSalary()));
-        worker1.work();
-        System.out.println(worker2.getName() + " zarabia " + String.format("%.2f", worker2.getSalary()));
-        worker2.work();
-        System.out.println(worker3.getName() + " zarabia " + String.format("%.2f", worker3.getSalary()));
-        worker3.work();
-        System.out.println(worker4.getName() + " zarabia " + String.format("%.2f", worker4.getSalary()));
-        worker4.work();
-        System.out.println(manager.getName() + " zarabia " + String.format("%.2f", manager.getSalary()));
-        manager.work();
-    }
-    }
+        // Instantiate employees with new fields
+        employees.add(new Worker("John", 3000, 1, "01-01-2020", "Developer"));
+        employees.add(new Worker("Jane", 3200.5, 2, "02-02-2020", "Developer"));
+        employees.add(new Worker("Jake", 3300.75, 3, "03-03-2020", "Developer"));
+        employees.add(new Worker("Jill", 3100.25, 4, "04-04-2020", "Developer"));
+        employees.add(new Manager("Joe", 5000.1, 5, "05-05-2020", "Project Manager"));
 
+        // Loop through employees and print details
+        for (Employee emp : employees) {
+            emp.work();  // Call work method
+            // Ensure correct format specifiers: %s for String, %d for int, %f for double
+            System.out.printf("- %s (ID: %d, Position: %s, Hire date: %s, Salary: %.2f).\n",
+                    emp.getName(), emp.getId(), emp.getPosition(), emp.getHireDate(), emp.getSalary());
+        }
+    }
+}
