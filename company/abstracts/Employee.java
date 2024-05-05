@@ -6,8 +6,8 @@ public abstract class Employee implements Employable {
     private String name;
     private double salary;
     private int id;
-    private String hireDate;  // New field
-    private String position;  // New field
+    private String hireDate;  
+    private String position;  
 
     public Employee(String name, double salary, int id, String hireDate, String position) {
         this.name = name;
@@ -39,7 +39,7 @@ public abstract class Employee implements Employable {
 
     @Override
     public int hashCode() {
-        return id;  // Simple hashCode implementation using the ID
+        return id;  
     }
 
     @Override
@@ -47,6 +47,6 @@ public abstract class Employee implements Employable {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Employee other = (Employee) obj;
-        return id == other.id;  // Comparing employees based on their ID
+        return id == other.id;  
     }
 }
