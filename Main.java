@@ -11,11 +11,11 @@ public class Main {
         List<Employee> employees = new ArrayList<>();
 
         
-        employees.add(new Worker("Jack", 3000, 1, "01-01-2020", "Developer"));
-        employees.add(new Worker("Jane", 3200.5, 2, "02-02-2020", "Developer"));
-        employees.add(new Worker("John", 3000, 1, "01-01-2020", "Developer")); // Duplicate ID as the first
-        employees.add(new Worker("Jake", 3300.75, 3, "03-03-2020", "Developer"));
-        employees.add(new Manager("Joe", 5000.1, 5, "05-05-2020", "Project Manager"));
+        employees.add(new Worker("Doug", 2500.00, 1, "01-01-2020", "Developer"));
+        employees.add(new Worker("Jack", 3200.00, 2, "02-02-2020", "Developer"));
+        employees.add(new Worker("Anna", 3500.00, 3, "03-03-2020", "Developer"));
+        employees.add(new Worker("Bill", 3700.00, 4, "04-04-2020", "Developer"));
+        employees.add(new Manager("Karen", 6000.00, 5, "05-05-2020", "Project Manager"));
         employees.add(new Manager("Jess", 5100.2, 6, "06-06-2020", "HR Manager"));
         employees.add(new Worker("Jill", 3100.25, 4, "04-04-2020", "Developer"));
         employees.add(new Worker("Jasper", 3150.5, 3, "07-07-2020", "Developer")); // Duplicate ID with Jake
