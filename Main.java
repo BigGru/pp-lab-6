@@ -16,7 +16,7 @@ public class Main {
         for (Employee emp : employees) {
             emp.work(); 
 
-            System.out.printf("- %s (ID: %d, Stanowisko: %s, Zatrudniono: %s, Pensja: %.2f).\n",
+            System.out.printf("- %s (ID: %d, Position: %s, Hire date: %s, Salary: %.2f).\n",
                     emp.getName(), emp.getId(), emp.getPosition(), emp.getHireDate(), emp.getSalary());
         }
     }
