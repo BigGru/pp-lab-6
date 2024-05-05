@@ -9,6 +9,6 @@ public class Manager extends Employee {
 
     @Override
     public void work() {
-        System.out.println("Menadzer " + getName() + " zarzadza...");
+        System.out.println("Menager " + getName() + " is menaging...");
     }
 }
