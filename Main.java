@@ -19,7 +19,7 @@ public class Main {
         employees.add(worker3);
         employees.add(manager);
 
-        employees.forEach(emp -> System.out.println(emp.getName() + " Posiada kod: " + emp.hashCode()));
+        employees.forEach(emp -> System.out.println(emp.getName() + " has code: " + emp.hashCode()));
 
         System.out.println("Porównywanie " + worker2.getName() + " z innymi pracownikami:");
         for (Employee emp : employees) {
