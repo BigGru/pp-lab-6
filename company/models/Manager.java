@@ -2,10 +2,9 @@ package company.models;
 
 import company.abstracts.Employee;
 
-public class Manager extends Employee {
-    // Ensure this constructor correctly passes all parameters to the superclass
+public class Manager extends Employee {  
     public Manager(String name, double salary, int id, String hireDate, String position) {
-        super(name, salary, id, hireDate, position); // Passing all arguments to the superclass constructor
+        super(name, salary, id, hireDate, position); 
     }
 
     @Override
