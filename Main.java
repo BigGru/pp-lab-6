@@ -20,6 +20,8 @@ public class Main {
         employees.add(new Worker("Greg", 3300, 1, "02-02-2020", "Developer")); 
         employees.add(new Worker("Caitlyn", 3400, 2, "03-03-2020", "Developer"));
         employees.add(new Manager("Lucy", 5150, 3, "05-05-2020", "Project Manager"));
+        employees.add(new Worker("Philip", 3400, 7, "03-03-2020", "Developer"));
+        employees.add(new Manager("Stacy", 5150, 6, "05-05-2020", "Project Manager"));
 
        
         double totalSalary = employees.stream().mapToDouble(Employee::getSalary).sum();
